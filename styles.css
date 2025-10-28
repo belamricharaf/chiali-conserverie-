@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2E7D32;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 36px;
+}
+.cta-button {
+    background-color: gold;
+    color: #2E7D32;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+.cta-button:hover {
+    background-color: darkgoldenrod;
+}
+
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.product h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+.product .price {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #2E7D32;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+.contact p {
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
