@@ -1,4 +1,4 @@
-// Initialiser le panier depuis le localStorage
+// Initialisation du panier depuis localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const panierCount = document.getElementById('panier-count');
 const cartItems = document.getElementById('cart-items');
