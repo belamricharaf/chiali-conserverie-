@@ -5,18 +5,18 @@
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: #4CAF50;
+    background-color: #2C3E50;
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -43,7 +43,12 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFC107;
 }
 
 /* Hero Section */
@@ -52,35 +57,32 @@ header nav ul li a {
     background-image: url('images/hero-image.jpg'); /* Remplace cette image */
     background-size: cover;
     background-position: center;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     text-align: center;
-}
-
-.hero-content {
-    max-width: 600px;
+    padding: 0 20px;
 }
 
 .hero h2 {
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 20px;
-    margin: 20px 0;
+    margin-bottom: 30px;
 }
 
 .cta-button {
     background-color: #FFC107;
-    color: #4CAF50;
+    color: #2C3E50;
     padding: 15px 40px;
     font-size: 18px;
-    border: none;
-    cursor: pointer;
     text-decoration: none;
+    border-radius: 5px;
 }
 
 .cta-button:hover {
@@ -90,7 +92,7 @@ header nav ul li a {
 /* Products Section */
 .products {
     padding: 80px 20px;
-    background-color: #fff;
+    background-color: white;
 }
 
 .products h2 {
@@ -108,12 +110,12 @@ header nav ul li a {
 
 .product {
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .product img {
@@ -124,6 +126,7 @@ header nav ul li a {
 
 .product h3 {
     font-size: 22px;
+    color: #2C3E50;
     margin: 15px 0;
 }
 
@@ -139,7 +142,7 @@ header nav ul li a {
 
 .product button {
     background-color: #FFC107;
-    color: #4CAF50;
+    color: #2C3E50;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -153,7 +156,7 @@ header nav ul li a {
 
 /* Cart Section */
 .panier {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #2E7D32;
     color: white;
     text-align: center;
@@ -165,7 +168,7 @@ header nav ul li a {
 
 button#checkout {
     background-color: #FFC107;
-    color: #4CAF50;
+    color: #2C3E50;
     padding: 15px 40px;
     border: none;
     cursor: pointer;
@@ -175,9 +178,36 @@ button#checkout:hover {
     background-color: #FFB300;
 }
 
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #FFC107;
+    color: #2C3E50;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #FFB300;
+}
+
 /* Footer */
 footer {
-    background-color: #4CAF50;
+    background-color: #2C3E50;
     color: white;
     padding: 20px;
     text-align: center;
