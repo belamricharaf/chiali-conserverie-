@@ -1,27 +1,29 @@
-/* Reset styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body and General Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
     background-color: #2C3E50;
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: top 0.3s;
 }
 
 header .container {
@@ -43,7 +45,7 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s;
 }
 
@@ -54,26 +56,31 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('images/hero-image.jpg'); /* Remplace cette image */
+    background-image: url('images/hero-image.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding: 0 20px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
 }
 
 .hero h2 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    animation: fadeIn 3s ease-out;
 }
 
 .cta-button {
@@ -81,8 +88,9 @@ header nav ul li a:hover {
     color: #2C3E50;
     padding: 15px 40px;
     font-size: 18px;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
@@ -99,6 +107,7 @@ header nav ul li a:hover {
     text-align: center;
     font-size: 40px;
     margin-bottom: 40px;
+    animation: fadeIn 2s ease-out;
 }
 
 .product-container {
@@ -116,6 +125,8 @@ header nav ul li a:hover {
     text-align: center;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
 }
 
 .product img {
@@ -148,10 +159,23 @@ header nav ul li a:hover {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .product button:hover {
     background-color: #FFB300;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Cart Section */
