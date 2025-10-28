@@ -1,33 +1,23 @@
-// Code for adding interactivity (e.g., adding to the cart, showing product details, etc.)
-// Example: Alert when the "Add to cart" button is clicked
-
-document.querySelectorAll('.cta-button').forEach(button => {
-    button.addEventListener('click', () => {
-        alert('Produit ajouté au panier!');
-    });
-});
-// Initialisation du panier à partir du localStorage
+// Initialiser le panier depuis le localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const panierCount = document.getElementById('panier-count');
+const cartItems = document.getElementById('cart-items');
 
-// Mettre à jour le compteur de produits dans le panier
-function updateCartCount() {
-    const panierCount = document.getElementById('panier-count');
+// Mettre à jour l'affichage du panier
+function updateCart() {
     panierCount.textContent = cart.length;
+    displayCart();
 }
 
 // Afficher les produits dans le panier
 function displayCart() {
-    const cartItems = document.getElementById('cart-items');
     cartItems.innerHTML = '';
-
     if (cart.length === 0) {
         cartItems.innerHTML = '<p>Votre panier est vide.</p>';
     } else {
         cart.forEach(item => {
             const productDiv = document.createElement('div');
-            productDiv.innerHTML = `
-                <p>${item.name} - ${item.price}€</p>
-            `;
+            productDiv.innerHTML = `<p>${item.name} - ${item.price}€</p>`;
             cartItems.appendChild(productDiv);
         });
     }
@@ -45,11 +35,9 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         cart.push(cartItem);
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        updateCartCount();
-        displayCart();
+        updateCart();
     });
 });
 
-// Affichage initial du panier
-updateCartCount();
-displayCart();
+// Initialiser l'affichage du panier
+updateCart();
